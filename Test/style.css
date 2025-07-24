@@ -1,0 +1,131 @@
+/* Fonts */
+:root {
+    --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --heading-font: "Poppins", sans-serif;
+    --nav-font: "Raleway", sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root { 
+    --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+    --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
+    --heading-color: #006b5a; /* Color for headings, subheadings and title throughout the website */
+    --accent-color: #009970; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+    --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+    --nav-color: #006b5a;  /* The default color of the main navmenu links */
+    --nav-hover-color: #009970; /* Applied to main navmenu links when they are hovered over or active */
+    --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+    --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+    --nav-dropdown-color: #006b5a; /* Used for navigation links of the dropdown items in the navigation menu. */
+    --nav-dropdown-hover-color: #009970; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  }
+
+/*--------------------------------------------------------------
+# General Styling & Shared Classes
+--------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: var(--heading-font);
+}
+
+li, a, button {
+    text-decoration: none;
+    list-style: none;
+    font-family: var(--heading-font);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--default-color)
+}
+
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+.contact {
+    background-color: aquamarine;
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    display: inline;
+    margin-bottom: 20px;
+}
+
+.contact-container {
+    background-color: #f7fcfc;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 60px 15px;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container form .contact-details {
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .contact-details .input-box {
+    width: calc(100% / 3 - 30px);
+    margin-bottom: 10px;
+}
+
+
+
+.contact-details .input-box input,
+.msg-subject .input-subject input,
+.msg-details .input-message textarea {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.msg-details .input-message textarea {
+    height: 300px;
+    font-family: var(--heading-font);
+}
+
+.input-btn input {
+    width: 100%;
+    background-color: #009970;
+    border: 0;
+    height: 45px;
+    border-radius: 5px;
+    color: var(--contrast-color);
+    margin-top: 15px;
+}
+
+.response {
+    color: red;
+    font-weight: bold;
+}
+
+.responseMessage {
+    margin-top: 10px;
+    padding: 10px 0;
+    font-weight: bold;
+    border: dashed green;
+    color: green;
+    text-align: center;
+}
